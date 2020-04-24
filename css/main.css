@@ -28,8 +28,13 @@ li.list-group-item {
   padding: 8px;
 }
 
-a.nav-link {
+a, a.nav-link {
   color: #584036;
+}
+
+a:hover {
+  color: #31231d;
+  text-decoration: none;
 }
 
 a.nav-link:hover, a.nav-link.active {

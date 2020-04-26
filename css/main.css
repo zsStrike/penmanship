@@ -61,3 +61,29 @@ ul.list-group li {
 .text-small {
   font-size: 13px;
 }
+.minor-title {
+  background: rgb(243, 237, 210) no-repeat center center;
+  /* border: 1px solid rgb(207, 202, 176); */
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all .5s;
+  line-height: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.minor-title:hover {
+  background: #EBE5C9;
+  cursor: pointer;
+}
+.border-right {
+  border-right: 1px solid #EBE5C9;
+}
+.border-bottom {
+  border-bottom: 1px solid #EBE5C9;
+}
+
+li.list-group-item:last-child {
+  padding-bottom: 20px;
+}

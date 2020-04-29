@@ -2,7 +2,11 @@
   padding: 0;
   margin: 0;
 }
-
+/* @font-face
+{
+  font-family: HongLeiBanShu;
+  src: url('../fonts/HongLeiBanShuJianTi-2.ttf');
+} */
 body {
   font-size: 14px;
   background: url(../image/bj.jpg);
@@ -62,7 +66,7 @@ ul.list-group li {
   font-size: 13px;
 }
 .minor-title {
-  background: rgb(243, 237, 210) no-repeat center center;
+  background: #bfb37c no-repeat center center;
   /* border: 1px solid rgb(207, 202, 176); */
   border-radius: 5px;
   font-size: 16px;
@@ -73,9 +77,23 @@ ul.list-group li {
   margin-top: 20px;
 }
 
-.minor-title:hover {
-  background: #EBE5C9;
+/* .minor-title:hover {
+  background: #aba06c;
   cursor: pointer;
+} */
+h5.card-title {
+  background-color: #bfb37c;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+}
+h4.card-title {
+  background-color: #bfb37c;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 400px;
 }
 .border-right {
   border-right: 1px solid #EBE5C9;
@@ -91,3 +109,8 @@ li.list-group-item:last-child {
 li.list-group-item {
   background: none !important;
 }
+
+/* h4, h5, p.minor-title {
+  font-family: HongLeiBanShu;
+  font-size: 22px;
+} */

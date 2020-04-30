@@ -66,7 +66,12 @@ ul.list-group li {
   font-size: 13px;
 }
 .minor-title {
-  background: #bfb37c no-repeat center center;
+  /* background: #bfb37c no-repeat center center; */
+  background-image: url(../image/titlebg_2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #eeeeee;
+  filter: brightness(1.8);
   /* border: 1px solid rgb(207, 202, 176); */
   border-radius: 5px;
   font-size: 16px;
@@ -82,15 +87,25 @@ ul.list-group li {
   cursor: pointer;
 } */
 h5.card-title {
-  background-color: #bfb37c;
+  /* background-color: #bfb37c; */
+  background-image: url(../image/titbg.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: brightness(1.5);
   height: 40px;
   line-height: 40px;
   border-radius: 5px;
+  color: #d3ceba;
 }
 h4.card-title {
-  background-color: #bfb37c;
-  height: 40px;
-  line-height: 40px;
+  /* background-color: #bfb37c; */
+  background-image: url(../image/titbg.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #d3ceba;
+  height: 60px;
+  line-height: 60px;
+  filter: brightness(1.5);
   border-radius: 5px;
   margin: 0 auto;
   width: 400px;

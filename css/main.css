@@ -88,7 +88,7 @@ ul.list-group li {
 } */
 h5.card-title {
   /* background-color: #bfb37c; */
-  background-image: url(../image/titbg.jpg);
+  background-image: url("../image/titbg (1).jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   filter: brightness(1.5);
@@ -99,7 +99,7 @@ h5.card-title {
 }
 h4.card-title {
   /* background-color: #bfb37c; */
-  background-image: url(../image/titbg.jpg);
+  background-image: url("../image/titbg (1).jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   color: #d3ceba;

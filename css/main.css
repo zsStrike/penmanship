@@ -13,20 +13,29 @@ body {
 }
 
 header {
+  position: relative;
   height: 400px;
   background: url(../image/bb1.jpg) no-repeat center 0;
 }
 
 div.nav-bar {
+  position: relative;
+  height: 100%;
   padding-top: 320px;
+  display: block;
 }
+
 
 ul.nav {
   background: url(../image/nav.jpg) no-repeat center 0;
-  background-size: contain;
-  height: 50px;
+  background-size: 100% 100%;
+  min-height: 50px;
   line-height: 32px;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
 }
+
 
 li.list-group-item {
   padding: 8px;

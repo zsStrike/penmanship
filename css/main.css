@@ -33,7 +33,8 @@ ul.nav {
   line-height: 32px;
   position: absolute;
   bottom: 30px;
-  width: 100%;
+  width: 97%;
+  padding: 10px 0;
 }
 
 

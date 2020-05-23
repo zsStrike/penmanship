@@ -117,6 +117,12 @@ h4.card-title {
   margin: 0 auto;
   width: 400px;
 }
+div.card h6 {
+  margin: 1em 0;
+}
+p.card-text {
+  text-indent: 2em;
+}
 .border-right {
   border-right: 1px solid #EBE5C9;
 }

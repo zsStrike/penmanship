@@ -16,6 +16,7 @@ header {
   position: relative;
   /* height: 400px; */
   background: url(../image/logo2.png) no-repeat center 0;
+  background-size: 1108px 211px;
 }
 
 div.nav-bar {

@@ -142,6 +142,33 @@ li.list-group-item {
   background: none !important;
 }
 
+span.pydocx-center {
+  display: block;
+  text-align: center;
+}
+span.pydocx-left, span.pydocx-center {
+  display: block;
+}
+
+span.title{
+  background-image: url("../image/titbg (1).jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #d3ceba;
+  height: 60px;
+  line-height: 60px;
+  filter: brightness(1.5);
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 400px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+span.subtitle {
+  /* background-color: #bfb37c; */
+  font-size: 1.25rem;
+}
 /* h4, h5, p.minor-title {
   font-family: HongLeiBanShu;
   font-size: 22px;

@@ -16,13 +16,13 @@ header {
   position: relative;
   /* height: 400px; */
   background: url(../image/logo2.png) no-repeat center 0;
-  background-size: 1108px 211px;
+  background-size: 1108px 290px;
 }
 
 div.nav-bar {
   position: relative;
   height: 100%;
-  padding-top: 210px;
+  padding-top: 290px;
   display: block;
 }
 

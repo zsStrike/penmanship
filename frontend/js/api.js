@@ -6,7 +6,7 @@ function defaultError(err) {
   console.log('err happend： ', err);
 }
 
-const BASEURL = 'www.ustccs.com:8000';
+const BASEURL = 'http://www.ustccs.com:5000';
 
 /**
  * 
@@ -17,7 +17,7 @@ const BASEURL = 'www.ustccs.com:8000';
 function getCategory(options) {
   $.ajax({
     type: 'GET',
-    url: BASEURL + '/api/pdf',
+    url: BASEURL + '/api/pdf/',
     contentType: 'application/json;charset=utf-8',
     data: {
       dir: options.dir,
@@ -26,4 +26,18 @@ function getCategory(options) {
     success: options.success || defaultSuccess,
     error: options.error || defaultError,
   });
+}
+
+function getUserList(options) {
+  $.ajax({
+    type: 'GET',
+    url: BASEURL + '/api/excel/',
+    contentType: 'application/json;charset=utf-8',
+    data: {
+      dir: options.dir,
+    },
+    dataType: 'json',
+    success: options.success || defaultSuccess,
+    error: options.error || defaultError,    
+  })
 }

@@ -71,7 +71,7 @@
           <div class="card mb-3" style="width: 100%;">
             <div class="card-body">
               <h5 class="card-title text-center">书画动态</h5>
-              <ul class="list-group list-group-flush">
+              <ul class="list-group list-group-flush" id="shdt">
                 <li class="list-group-item">隶书：挽联·悼谭公</li>
                 <li class="list-group-item">鹧鸪天•悼谭公---赵忠民</li>
                 <li class="list-group-item">七律：悼谭公---贾学义</li>
@@ -85,30 +85,26 @@
           <div class="card mb-3" style="width: 100%;">
             <div class="card-body">
               <h5 class="card-title text-center">请你欣赏</h5>
-              <ul class="list-group list-group-flush">
-                <ul class="list-group">
-                  <li class="list-group-item">1. 国学宝典</li>
-                  <li class="list-group-item">2. 古典诗词</li>
-                  <li class="list-group-item">3. 成语大全</li>
-                  <li class="list-group-item">4. 中国古籍</li>
-                  <li class="list-group-item">5. 书法论集</li>
-                  <li class="list-group-item">6. 唐宋词格律</li>
-                </ul>
+              <ul class="list-group list-group-flush" id="qnxs">
+                <li class="list-group-item">1. 国学宝典</li>
+                <li class="list-group-item">2. 古典诗词</li>
+                <li class="list-group-item">3. 成语大全</li>
+                <li class="list-group-item">4. 中国古籍</li>
+                <li class="list-group-item">5. 书法论集</li>
+                <li class="list-group-item">6. 唐宋词格律</li>
               </ul>
             </div>
           </div>
           <div class="card mb-3" style="width: 100%;">
             <div class="card-body">
               <h5 class="card-title text-center">友情链接</h5>
-              <ul class="list-group list-group-flush">
-                <ul class="list-group">
-                  <li class="list-group-item">1. 国学宝典</li>
-                  <li class="list-group-item">2. 古典诗词</li>
-                  <li class="list-group-item">3. 成语大全</li>
-                  <li class="list-group-item">4. 中国古籍</li>
-                  <li class="list-group-item">5. 书法论集</li>
-                  <li class="list-group-item">6. 唐宋词格律</li>
-                </ul>
+              <ul class="list-group list-group-flush" id="yqlj">
+                <li class="list-group-item">1. 国学宝典</li>
+                <li class="list-group-item">2. 古典诗词</li>
+                <li class="list-group-item">3. 成语大全</li>
+                <li class="list-group-item">4. 中国古籍</li>
+                <li class="list-group-item">5. 书法论集</li>
+                <li class="list-group-item">6. 唐宋词格律</li>
               </ul>
             </div>
           </div>
@@ -117,29 +113,31 @@
       <div class="col-lg-9 col-md-12">
         <div class="content">
           <div class="card" style="width: 100%;">
-            <div class="card-body">
+            <div class="card-body d-none" id="content">
+              <!-- <iframe src = "./js/ViewerJS/index.html?zoom=page-width#../../assets/docx/协会新闻.pdf" width='100%' height='900' allowfullscreen webkitallowfullscreen></iframe> -->
+            </div>
+            <div class="card-body" id="dir">
               <h4 class="card-title text-center mb-4">协会新闻</h4>
-              <ul class="list-group list-group-flush">
-                <ul class="list-group">
-                  <li class="list-group-item">
-                    <a href="./协会新闻1.html">协会新闻1</a>
-                  </li>
-                  <li class="list-group-item">
-                    <a href="./协会新闻1.html">协会新闻1</a>
-                  </li>
-                  <li class="list-group-item">
-                    <a href="./协会新闻1.html">协会新闻1</a>
-                  </li>
-                  <li class="list-group-item">
-                    <a href="./协会新闻1.html">协会新闻1</a>
-                  </li>
-                  <li class="list-group-item">
-                    <a href="./协会新闻1.html">协会新闻1</a>
-                  </li>
-                  <li class="list-group-item">
-                    <a href="./协会新闻1.html">协会新闻1</a>
-                  </li>
-                </ul>
+              <ul class="list-group list-group-flush" id="content-list">
+                <li class="list-group-item">
+                  <a href="javascript:void(0);" onclick="changeContent('someurl')">${item.title}</a>
+                  <span style="float: right;">2020-10-12 11:11:11</span>
+                </li>
+                <li class="list-group-item">
+                  <a href="./协会新闻1.html">协会新闻1</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="./协会新闻1.html">协会新闻1</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="./协会新闻1.html">协会新闻1</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="./协会新闻1.html">协会新闻1</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="./协会新闻1.html">协会新闻1</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -159,10 +157,36 @@
     </div>
   </footer>
   <script src="js/api.js"></script>
+  <script src="js/leftbar.js"></script>
   <script>
+    let list = $('#content-list');
+    let content = $('#content');
+    let dir = '协会新闻';
+    function changeContent(url) {
+      console.log(url);
+      content.html(`
+        <iframe src = "./js/ViewerJS/index.html?zoom=page-width#http://${url}" width='100%' height='900' allowfullscreen webkitallowfullscreen id="content-iframe"></iframe>
+      `);
+      content.removeClass('d-none');
+      $('#dir').addClass('d-none');
+    }
     getCategory({
-      dir: 'News',
+      dir,
+      success(res) {
+        console.log(res);
+        let innerHtml = ''
+        res.forEach(item => {
+          innerHtml += `
+          <li class="list-group-item">
+            <a href="javascript:void(0);" onclick="changeContent('${item.url}')">${item.title}</a>
+            <span style="float: right;">${new Date(item.time).toLocaleString('zh-CN', {hour12: false})}</span>
+          </li>
+          `;
+        });
+        list.html(innerHtml);
+      },
     });
+
   </script>
 </body>
 

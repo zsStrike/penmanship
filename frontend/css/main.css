@@ -26,6 +26,9 @@ div.nav-bar {
   display: block;
 }
 
+iframe {
+  border: none;
+}
 
 ul.nav {
   background: url(../image/nav.jpg) no-repeat center 0;

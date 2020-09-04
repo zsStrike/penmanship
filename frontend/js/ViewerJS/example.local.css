@@ -1,0 +1,34 @@
+/* This is just a sample file with CSS rules. You should write your own @font-face declarations
+ * to add support for your desired fonts.
+ */
+
+#titlebar {
+  display: none;
+  height: 0px;
+}
+
+#canvasContainer {
+  padding: 0;
+  background: none;
+}
+
+#toolbarContainer {
+  display: none;
+  height: 0px;
+}
+
+#canvasContainer {
+  top: -13px;
+  bottom: -13px;
+}
+
+.page {
+  width: 100% !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+.page canvas {
+  /* width: 100% !important; */
+}
+

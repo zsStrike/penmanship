@@ -17,34 +17,34 @@
     <div class="nav-bar container">
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link " href="./index目录_en.html">HOME</a>
+          <a class="nav-link" href="./index目录.html">协会首页</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./协会新闻目录_en.html">News</a>
+          <a class="nav-link " href="./协会新闻目录.html">协会新闻</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./展赛信息目录_en.html">Exhibition & Competition</a>
+          <a class="nav-link" href="./展赛信息目录.html">展赛信息</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="./作品展厅目录_en.html">Art Gallery</a>
+          <a class="nav-link " href="./作品展厅目录.html">作品展厅</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./书画论坛目录_en.html">Discuzz</a>
-        </li>        
-        <li class="nav-item">
-          <a class="nav-link " href="./加入协会_en.html">Join Us</a>
+          <a class="nav-link " href="./书画论坛目录.html">书画论坛</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./会员名录_en.html">Member List</a>
+          <a class="nav-link " href="./加入协会.html">加入协会</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./组织架构_en.html">Organization Structure</a>
+          <a class="nav-link" href="./会员名录.html">会员名录</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./联系方式_en.html">Contact Us</a>
+          <a class="nav-link" href="./组织架构.html">组织架构</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./index目录.html">Chinese</a>
+          <a class="nav-link" href="./联系方式.html">联系方式</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./index目录_en.html">English</a>
         </li>
       </ul>
     </div>
@@ -67,10 +67,10 @@
                 <li class="list-group-item">贾学义诗词选登</li>
               </ul>
             </div>
-          </div>           -->
+          </div> -->
           <div class="card mb-3" style="width: 100%;">
             <div class="card-body">
-              <h5 class="card-title text-center" id="shdt">Recent Activities</h5>
+              <h5 class="card-title text-center" id="shdt">书画动态</h5>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">隶书：挽联·悼谭公</li>
                 <li class="list-group-item">鹧鸪天•悼谭公---赵忠民</li>
@@ -84,7 +84,7 @@
           </div>
           <div class="card mb-3" style="width: 100%;">
             <div class="card-body">
-              <h5 class="card-title text-center" id="qnxs">Explore</h5>
+              <h5 class="card-title text-center" id="qnxs">请你欣赏</h5>
               <ul class="list-group list-group-flush">
                 <ul class="list-group">
                   <li class="list-group-item">1. 国学宝典</li>
@@ -99,7 +99,7 @@
           </div>
           <div class="card mb-3" style="width: 100%;">
             <div class="card-body">
-              <h5 class="card-title text-center" id="yqlj">Links</h5>
+              <h5 class="card-title text-center" id="yqlj">友情链接</h5>
               <ul class="list-group list-group-flush">
                 <ul class="list-group">
                   <li class="list-group-item">1. 国学宝典</li>
@@ -117,22 +117,8 @@
       <div class="col-lg-9 col-md-12">
         <div class="content">
           <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h4 class="card-title text-center mb-4">作品展厅</h4>
-              <h5 class="text-center">朱启超</h5>
-              <p class="text-center">
-                <img src="./image/朱启超书法1.jpg" alt="" style="max-height: 340px;">
-                <img class="ml-4" src="./image/朱启超书法2.jpg" alt="" style="max-height: 340px;">
-              </p> 
-              <p class="text-center">
-                <img class="mw-75" src="./image/朱启超书法3.jpg" alt="" style="max-height: 340px; max-width: 80%;">
-              </p> 
-              <p class="text-center">
-                <img src="./image/朱启超书法4.jpg" alt="" style="max-height: 340px; max-width: 80%;">
-              </p> 
-              <p class="text-center">
-                <img src="./image/朱启超书法5.jpg" alt="" style="max-height: 340px; max-width: 80%;">
-              </p>               
+            <div class="card-body" id="content">
+              
             </div>
           </div>
         </div>
@@ -150,6 +136,16 @@
       </div>
     </div>
   </footer>
+  <script src="./js/jquery.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/leftbar.js"></script>
+  <script>
+    let content = $('#content');
+    let pdfUrl = window.location.search.match(/[?&]pdf-url=([\s\S]+)/)[1];
+    content.html(`
+        <iframe src = "./js/ViewerJS/index.html?zoom=page-width#http://${pdfUrl}" width='100%' height='900' allowfullscreen webkitallowfullscreen id="content-iframe"></iframe>
+      `);
+  </script>     
 </body>
 
 </html>

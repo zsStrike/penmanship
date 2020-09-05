@@ -1,17 +1,22 @@
-let shdt = $('#shdt');
-let qnxs = $('#qnxs');
-let yqlj = $('#yqlj');
+let shdt = $('#shdt + ul');
+let qnxs = $('#qnxs + ul');
+let yqlj = $('#yqlj + ul');
+
+const IS_EN = window.location.href.includes('_en.html');
 
 getCategory({
-  dir: 'shdt',
+  dir: '书画动态',
   success(res) {
     console.log(res);
     let innerHtml = ''
-    res.data.forEach(item => {
-      innerHtml += `
-      <li class="list-group-item" data-url="${item.url}">
-        <span>${item.title}</span>
-        <span style="float: right;">${new Date(item.time).toLocaleString('zh-CN', {hour12: false})}</span>
+    res.forEach(item => {
+      innerHtml += !IS_EN ? `
+      <li class="list-group-item">
+        <span><a href="./leftbar.html?pdf-url=${item.url}">${item.title}</a></span>
+      </li>
+      ` : `
+      <li class="list-group-item">
+        <span><a href="./leftbar_en.html?pdf-url=${item.url}">${item.title}</a></span>
       </li>
       `;
     });
@@ -20,15 +25,18 @@ getCategory({
 });
 
 getCategory({
-  dir: 'qnxs',
+  dir: '请你欣赏',
   success(res) {
     console.log(res);
     let innerHtml = ''
-    res.data.forEach(item => {
-      innerHtml += `
-      <li class="list-group-item" data-url="${item.url}">
-        <span>${item.title}</span>
-        <span style="float: right;">${new Date(item.time).toLocaleString('zh-CN', {hour12: false})}</span>
+    res.forEach(item => {
+      innerHtml += !IS_EN ? `
+      <li class="list-group-item">
+        <span><a href="./leftbar.html?pdf-url=${item.url}">${item.title}</a></span>
+      </li>
+      ` : `
+      <li class="list-group-item">
+        <span><a href="./leftbar_en.html?pdf-url=${item.url}">${item.title}</a></span>
       </li>
       `;
     });
@@ -37,15 +45,18 @@ getCategory({
 });
 
 getCategory({
-  dir: 'yqlj',
+  dir: '友情链接',
   success(res) {
     console.log(res);
     let innerHtml = ''
-    res.data.forEach(item => {
-      innerHtml += `
-      <li class="list-group-item" data-url="${item.url}">
-        <span>${item.title}</span>
-        <span style="float: right;">${new Date(item.time).toLocaleString('zh-CN', {hour12: false})}</span>
+    res.forEach(item => {
+      innerHtml += !IS_EN ? `
+      <li class="list-group-item">
+        <span><a href="./leftbar.html?pdf-url=${item.url}">${item.title}</a></span>
+      </li>
+      ` : `
+      <li class="list-group-item">
+        <span><a href="./leftbar_en.html?pdf-url=${item.url}">${item.title}</a></span>
       </li>
       `;
     });

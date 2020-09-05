@@ -319,7 +319,7 @@
         let innerHtml = `<p class="card-text" style="display: flex; flex-wrap: wrap;">`;
         res.forEach(item => {
           innerHtml += `
-            <a href="${item.url === '' ? 'javascript:void(0);' : item.url}">${item.name}</a>
+            <a href="${item.url === '' ? 'javascript:void(0);' : item.url}" class="${item.url !== '' ? 'active' : ''}">${item.name}</a>
           `
         })
         innerHtml += `</p>`

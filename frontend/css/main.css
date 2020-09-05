@@ -16,13 +16,13 @@ header {
   position: relative;
   /* height: 400px; */
   background: url(../image/logo2.png) no-repeat center 0;
-  background-size: 1108px 290px;
+  background-size: 1108px 220px;
 }
 
 div.nav-bar {
   position: relative;
   height: 100%;
-  padding-top: 290px;
+  padding-top: 220px;
   display: block;
 }
 
@@ -47,6 +47,9 @@ a, a.nav-link {
   color: #584036;
 }
 
+#content a.active {
+  color: rgb(32, 57, 167);
+}
 a:hover {
   color: #31231d;
   text-decoration: none;

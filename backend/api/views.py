@@ -21,7 +21,7 @@ class PdfDirView(View):
     def get(self, request):
         param = request.GET.get('dir', None)
         if param:
-            result = get_dir_detail(param, get_current_site(request).name)
+            result = get_dir_detail(param, 'http://www.ustccs.com:5000')
         else:
             result = []
         return JsonResponse(result, safe=False)
@@ -36,3 +36,4 @@ class ExcelDirView(View):
         else:
             result = []
         return JsonResponse(result, safe=False)
+

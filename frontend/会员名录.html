@@ -117,8 +117,8 @@
       <div class="col-lg-9 col-md-12">
         <div class="content">
           <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h4 class="card-title text-center mb-4" id="content">会员名录</h4>
+            <div class="card-body" id="content">
+              <h4 class="card-title text-center mb-4">会员名录</h4>
 
               <!-- <h4 class="card-title text-center mb-4">会员名录</h4> -->
               <!-- <h5>中国大陆</h5>
@@ -310,10 +310,23 @@
       </div>
     </div>
   </footer>
-
+  <script src="./js/jquery.min.js"></script>
   <script src="./js/api.js"></script>
   <script>
-    
+    getUserList({
+      dir: '会员名录',
+      success(res) {
+        console.log(res);
+        let innerHtml = `<p class="card-text" style="display: flex; flex-wrap: wrap;">`;
+        res.forEach(item => {
+          innerHtml += `
+            <a href="${item.url === '' ? 'javascript:void(0);' : item.url}">${item.name}</a>
+          `
+        })
+        innerHtml += `</p>`
+        $('#content').html(($('#content').html() + innerHtml));
+      }
+    })
   </script>
 </body>
 

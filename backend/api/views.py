@@ -21,7 +21,7 @@ class PdfDirView(View):
     def get(self, request):
         param = request.GET.get('dir', None)
         if param:
-            result = get_dir_detail(param, 'http://www.ustccs.com:5000')
+            result = get_dir_detail(param, 'www.ustccs.com:5000')
         else:
             result = []
         return JsonResponse(result, safe=False)

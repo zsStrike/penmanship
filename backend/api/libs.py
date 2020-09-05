@@ -16,7 +16,8 @@ def get_dir_detail(param, url):
     path = 'static/pdf/{}'.format(param)
     files = os.listdir(path)
     return [
-        {'time': os.path.getatime('static/docx/{}'.format(param) + '/' + file), 'url': url + '/' + path + '/' + file,
+        {'time': os.path.getatime('static/docx/{}'.format(param) + '/' + os.path.splitext(file)[0] + '.docx'),
+         'url': url + '/' + path + '/' + file,
          'title': os.path.splitext(file)[0]} for file in files if not file[0] == '.']
     # return [{'time': datetime.fromtimestamp(os.path.getatime(file))} for file in files]
 
